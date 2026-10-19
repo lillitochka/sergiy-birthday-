@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Для коханого Сергія 💙</title>
+
+<style>
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --navy: #071426;
+  --blue: #102b4e;
+  --gold: #d8c18b;
+  --white: #f7f5f0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--navy);
+  color: var(--white);
+  font-family: Georgia, "Times New Roman", serif;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+section {
+  padding: 75px 20px;
+}
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background:
+    radial-gradient(ellipse at top, #19385e 0%, transparent 65%),
+    linear-gradient(160deg, #071426, #0d2340, #071426);
+  position: relative;
+  overflow: hidden;
+}
+
+.eyebrow {
+  color: var(--gold);
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  font: 11px Arial, sans-serif;
+  margin-bottom: 25px;
+}
+
+h1 {
+  font-size: clamp(39px, 10vw, 70px);
+  font-weight: normal;
+  line-height: 1.12;
+  max-width: 700px;
+  margin: 0 auto 25px;
+}
+
+h1 span {
+  color: var(--gold);
+  font-style: italic;
+}
+
+.subtitle {
+  color: #c5d0df;
+  font-size: 17px;
+  line-height: 1.8;
+  max-width: 450px;
+  margin: 0 auto 35px;
+}
+
+button, .button {
+  display: inline-block;
+  border: 1px solid var(--gold);
+  background: transparent;
+  color: var(--gold);
+  padding: 15px 25px;
+  font: 14px Arial, sans-serif;
+  letter-spacing: 1px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: .3s;
+}
+
+button:hover, .button:hover {
+  background: var(--gold);
+  color: var(--navy);
+}
+
+.heart {
+  color: var(--gold);
+  font-size: 24px;
+  margin-top: 35px;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  50% { transform: scale(1.15); }
+}
+
+.section-label {
+  color: var(--gold);
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  font: 11px Arial, sans-serif;
+  margin-bottom: 18px;
+}
+
+h2 {
+  font-size: clamp(30px, 7vw, 45px);
+  font-weight: normal;
+  margin-bottom: 25px;
+}
+
+.message {
+  max-width: 650px;
+  margin: auto;
+  color: #d4dce7;
+  font-size: 17px;
+  line-height: 2;
+}
+
+.message p {
+  margin-bottom: 18px;
+}
+
+.gold {
+  color: var(--gold);
+  font-style: italic;
+}
+
+.gallery {
+  background: #0a1a2f;
+}
+
+.photos {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 22px;
+  max-width: 850px;
+  margin: 40px auto 0;
+}
+
+.photo-card {
+  border: 1px solid #30435b;
+  padding: 10px;
+  background: #0d2038;
+  transition: transform .3s;
+}
+
+.photo-card:hover {
+  transform: translateY(-5px);
+}
+
+.photo-card img {
+  display: block;
+  width: 100%;
+  height: 310px;
+  object-fit: cover;
+}
+
+.photo-card p {
+  color: var(--gold);
+  padding: 15px 5px 7px;
+  font-style: italic;
+}
+
+.music-box {
+  border: 1px solid #30435b;
+  max-width: 440px;
+  padding: 30px 20px;
+  margin: 35px auto 0;
+  background: #0c1e34;
+}
+
+.music-icon {
+  font-size: 30px;
+  color: var(--gold);
+  margin-bottom: 15px;
+}
+
+audio {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.wishes {
+  max-width: 650px;
+  margin: 35px auto 0;
+  display: grid;
+  gap: 15px;
+}
+
+.wish {
+  border: 1px solid #30435b;
+  padding: 22px 15px;
+  color: #dce3ed;
+  line-height: 1.8;
+  background: rgba(255,255,255,.02);
+}
+
+.wish span {
+  display: block;
+  color: var(--gold);
+  margin-bottom: 7px;
+  font-size: 19px;
+}
+
+.final {
+  background:
+    radial-gradient(ellipse at center, #19385e 0%, #071426 72%);
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.final h2 {
+  font-size: clamp(36px, 8vw, 58px);
+}
+
+.footer {
+  padding: 25px 15px;
+  color: #8e9bae;
+  font: 11px Arial, sans-serif;
+  letter-spacing: 2px;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity .8s, transform .8s;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (min-width: 600px) {
+  .photos {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .photo-card img {
+    height: 300px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<section class="hero">
+  <p class="eyebrow">22 · 11 · 2026</p>
+
+  <h1>З днем народження,<br><span>мій коханий</span></h1>
+
+  <p class="subtitle">
+    Для мого Сергія, моєї опори, мого щастя
+    та людини, з якою я хочу пройти все життя
+  </p>
+
+  <a class="button" href="#letter">ВІДКРИТИ МОЄ ПОСЛАННЯ</a>
+
+  <div class="heart">♡</div>
+</section>
+
+<section id="letter" class="reveal">
+  <p class="section-label">Від усього серця</p>
+  <h2>Мій любий <span class="gold">Сергію</span></h2>
+
+  <div class="message">
+    <p>
+      Коханий, з днем народження тебе!
+      Хочу, щоб ти знав, наскільки сильно я тебе люблю
+      і як сильно ціную все, що ти робиш для нас.
+    </p>
+
+    <p>
+      Дякую тобі за турботу, підтримку, за твою любов
+      і за кожен день, який ми проживаємо разом.
+      Ти для мене набагато більше, ніж просто чоловік.
+      Ти моя рідна людина, мій Зайчик і моя опора.
+    </p>
+
+    <p>
+      Я бажаю тобі міцного здоров'я, щастя, процвітання,
+      успіхів у всіх справах і сил для всього, про що мрієш.
+      Нехай у тебе завжди вистачає можливостей
+      здійснювати свої бажання.
+    </p>
+
+    <p>
+      Я мрію, щоб у нас усе склалося так, як ми хочемо:
+      щоб ми придбали наш Sprinter, мали власну квартиру
+      в Ужгороді та побудували щасливе майбутнє разом.
+    </p>
+
+    <p>
+      Найбільше я хочу, щоб закінчилася війна,
+      щоб ми жили спокійно, не боялися за завтрашній день
+      і просто раділи життю поруч одне з одним.
+    </p>
+
+    <p class="gold">
+      Я люблю тебе. І хочу, щоб попереду в нас було
+      ще дуже багато щасливих років разом.
+    </p>
+  </div>
+</section>
+
+<section class="gallery reveal">
+  <p class="section-label">Наші миті</p>
+  <h2>Спогади, які <span class="gold">гріють</span></h2>
+
+  <p class="subtitle">
+    Кожна фотографія зберігає частинку нашої історії
+  </p>
+
+  <div class="photos">
+    <div class="photo-card">
+      <img src="1000083702.jpg" alt="Наш спогад 1">
+      <p>Моя рідна людина</p>
+    </div>
+
+    <div class="photo-card">
+      <img src="1000085042.jpg" alt="Наш спогад 2">
+      <p>Наші щасливі миті</p>
+    </div>
+
+    <div class="photo-card">
+      <img src="1000085079.jpg" alt="Наш спогад 3">
+      <p>І ще багато попереду</p>
+    </div>
+  </div>
+</section>
+
+<section class="reveal">
+  <p class="section-label">Особлива мелодія</p>
+  <h2>Трохи <span class="gold">для душі</span></h2>
+
+  <div class="music-box">
+    <div class="music-icon">♫</div>
+    <p class="message">Нехай ця музика буде маленькою частинкою мого тепла для тебе</p>
+
+    <audio controls preload="metadata">
+      <source src="audio.mp3" type="audio/mpeg">
+      Твій браузер не підтримує відтворення аудіо.
+    </audio>
+  </div>
+</section>
+
+<section class="reveal">
+  <p class="section-label">Мої побажання</p>
+  <h2>Для тебе, <span class="gold">коханий</span></h2>
+
+  <div class="wishes">
+    <div class="wish">
+      <span>Здоров'я</span>
+      Нехай у тебе завжди будуть сили, енергія та гарне самопочуття
+    </div>
+
+    <div class="wish">
+      <span>Успіх і процвітання</span>
+      Нехай твоя праця приносить гідні результати,
+      а кожна справа веде до нових можливостей
+    </div>
+
+    <div class="wish">
+      <span>Наші мрії</span>
+      Нехай наші плани здійснюються один за одним,
+      а попереду буде багато приємних сюрпризів
+    </div>
+
+    <div class="wish">
+      <span>Мир і спокій</span>
+      Нехай настане мир, а в нашому домі завжди
+      панують любов, затишок і щастя
+    </div>
+  </div>
+</section>
+
+<section class="final reveal">
+  <p class="section-label">І найголовніше</p>
+  <h2>Я тебе <span class="gold">кохаю</span></h2>
+
+  <p class="subtitle">
+    З днем народження, мій Зайчику.
+    Нехай наше найкраще майбутнє буде попереду.
+  </p>
+
+  <div class="heart">♡</div>
+</section>
+
+<footer class="footer">
+  З ЛЮБОВ'Ю, ДЛЯ МОГО СЕРГІЯ ♡
+</footer>
+
+<script>
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("visible");
+    }
+  });
+}, { threshold: 0.12 });
+
+document.querySelectorAll(".reveal").forEach(section => {
+  observer.observe(section);
+});
+</script>
+
+</body>
+</html>
